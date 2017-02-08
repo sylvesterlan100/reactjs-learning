@@ -2,6 +2,16 @@ import React, {Component} from 'react';
 import Board from '../board/board';
 
 class Gui extends Component {
+
+	constructor() {
+		super();
+		this.state = {
+			history: [{
+				squares: Array(9).fill(null)}],
+			isXNext: true
+		}
+	}
+
 	render() {
 		return (
 			<div className="game">
